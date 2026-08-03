@@ -8,7 +8,7 @@ local keymap = vim.keymap
 opt.number = true
 opt.mouse = "a"
 
--- need to figure out my clipboard provider
+-- figure out clipboard provider before enabling 
 --opt.clipboard = "unnamedplus"
 
 -- indentation
@@ -20,7 +20,7 @@ opt.autoindent = true
 opt.smartindent = true -- I still have no idea what this does, but everyone hates it for yaml
 
 -- keybinds
-keymap.set.("i", "jk", "<Esc>")
+keymap.set("i", "jk", "<Esc>", { desc = "Escape to normal mode"})
 
 -- set specific settings for yaml
 api.nvim_create_autocmd("FileType", {
