@@ -21,10 +21,17 @@ opt.autoindent = true
 opt.smartindent = true -- I still have no idea what this does, but everyone hates it for yaml
 
 -- keybinds
+-- keymap.set()
 keymap.set("i", "jk", "<Esc>", { desc = "Escape to normal mode"})
 
 keymap.set("x", "cc", ":s/^/#/<CR>", { desc = "Comment line" })
 keymap.set("x", "cx", ":s/^#//<CR>", { desc = "Uncomment line" })
+
+--- setup split view controls
+keymap.set('n', '<C-h>', '<C-w>h')
+keymap.set('n', '<C-j>', '<C-w>j')
+keymap.set('n', '<C-k>', '<C-w>k')
+keymap.set('n', '<C-l>', '<C-w>l')
 
 -- set specific settings for yaml
 api.nvim_create_autocmd("FileType", {
