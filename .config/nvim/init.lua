@@ -4,6 +4,7 @@
 local opt = vim.opt
 local api = vim.api
 local keymap = vim.keymap
+
 -- general
 opt.number = true
 opt.mouse = "a"
