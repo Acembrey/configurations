@@ -10,7 +10,7 @@ opt.number = true
 opt.mouse = "a"
 
 -- figure out clipboard provider before enabling 
---opt.clipboard = "unnamedplus"
+opt.clipboard = "unnamedplus"
 
 -- indentation
 opt.expandtab = true
