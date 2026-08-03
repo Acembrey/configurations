@@ -13,7 +13,7 @@ case "$answer" in
         exit 0
         ;;
     *)
-        echo "Invalid input. Aborted.
+        echo "Invalid input. Aborted."
         exit 1
         ;;
 esac
