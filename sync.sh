@@ -1,12 +1,12 @@
 #!/bin/bash
 
-rsync -avn --exclude='sync.sh' ./* ~/.config
+rsync -avn --exclude='sync.sh' ./.config/ ~/.config/
 
 # Validate the sync before executing
 read -rp "Proceed with synchronization? [y/n]" answer
 case "$answer" in
     y|Y)
-        rsync -av --exclude='sync.sh' ./* ~/.config
+        rsync -av --exclude='sync.sh' ./.config/ ~/.config/
         ;;
     n|N)
         echo "Aborted."

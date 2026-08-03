@@ -1,9 +1,9 @@
 -- ~/.config/nvim/init.lua
 
--- set var
+-- set vars
 local opt = vim.opt
 local api = vim.api
-
+local keymap = vim.keymap
 -- general
 opt.number = true
 opt.mouse = "a"
@@ -18,6 +18,9 @@ opt.tabstop = 4
 opt.softtabstop = 4
 opt.autoindent = true
 opt.smartindent = true -- I still have no idea what this does, but everyone hates it for yaml
+
+-- keybinds
+keymap.set.("i", "jk", "<Esc>")
 
 -- set specific settings for yaml
 api.nvim_create_autocmd("FileType", {
