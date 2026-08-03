@@ -23,6 +23,9 @@ opt.smartindent = true -- I still have no idea what this does, but everyone hate
 -- keybinds
 keymap.set("i", "jk", "<Esc>", { desc = "Escape to normal mode"})
 
+keymap.set("x", "cc", ":s/^/#/<CR>", { desc = "Comment line" })
+keymap.set("x", "cx", ":s/^#//<CR>", { desc = "Uncomment line" })
+
 -- set specific settings for yaml
 api.nvim_create_autocmd("FileType", {
     pattern = { "yaml", "yml" },
